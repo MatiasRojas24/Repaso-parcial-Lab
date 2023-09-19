@@ -1,0 +1,19 @@
+//A-	Programa java para calcular si la última cifra de dos números enteros es la misma. 
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int num1, num2;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduzca un número: ");
+        num1 = sc.nextInt();
+        System.out.println("Introduzca otro número: ");
+        num2 = sc.nextInt();
+
+        if (num1%10 == num2%10) {
+            System.out.println("La última cifra de ambos números es igual");
+        }
+        else {
+            System.out.println("La última cifra de ambos números es distinta");
+        }
+    }
+}
