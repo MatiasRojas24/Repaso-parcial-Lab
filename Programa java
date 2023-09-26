@@ -5,20 +5,21 @@ public class Main {
         int num, largo;
         String numS;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese un número de tres cifras: ");
-        num = sc.nextInt();
-        numS = Integer.toString(num);
-        largo = numS.length();
-        if (largo == 3){
-            if (num/100 == num%10){
+        do {
+            System.out.print("Ingrese un número de tres cifras. Para finalizar, ingrese 0: ");
+            do {
+                num = sc.nextInt();
+                numS = Integer.toString(num);
+                largo = numS.length();
+                if (largo != 3) {
+                    System.out.println("El número ingresado no es de 3 cifras, intentelo de nuevo: ");
+                }
+            } while (largo != 3);
+            if (num / 100 == num % 10) {
                 System.out.println("El número ingresado es capicúa");
-            }
-            else{
+            } else {
                 System.out.println("El número ingresado no es capicúa");
             }
-        }
-        else{
-            System.out.println("El número ingresado no es de 3 cifras");
-        }
+        }while(num != 0);
     }
 }
